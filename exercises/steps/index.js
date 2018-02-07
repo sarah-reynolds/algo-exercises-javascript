@@ -17,6 +17,54 @@
 //       '### '
 //       '####'
 
-function steps(n) {}
+
+function steps(n) {
+  for(let i = 1; i <= n; i++){
+    let string = '';
+    string += ('#'.repeat(i));
+    string += (' '.repeat(n-i))
+    console.log(string);
+  }
+}
 
 module.exports = steps;
+
+  // for(let row = 1; row <= n; row++){
+  //   let stairs = '';
+  //   for(let col = 1; col <= n; col++){
+  //     if(col <= row){
+  //       stairs += '#';
+  //     }else{
+  //       stairs += ' ';
+  //     }
+  //   }
+  //   console.log(stairs);
+  // }
+
+
+  // for(let i = 1; i <= n; i++){
+  //   let string = '';
+  //   string += ('#'.repeat(i));
+  //   string += (' '.repeat(n-i))
+  //   console.log(string);
+  // }
+
+
+// Long, recursive solution:
+// function steps(n, row = 0, stair = '') {
+//   if(n === row) {
+//     return;
+//   }
+  
+//   if(n === stair.length) {
+//     console.log(stair);
+//     return steps(n, row +1);
+//   }
+  
+//   if(stair.length <= row) {
+//     stair += '#';
+//   }else{
+//     stair += ' ';
+//   }
+//   steps(n, row, stair);
+// }
